@@ -1,11 +1,11 @@
-#CS - cluster switcher
+# CS - cluster switcher
 
 
-##Build
+## Build
 go build
 
 
-##Usage
+## Usage
 cs --help
 
 
