@@ -12,7 +12,7 @@ var (
 	aoconfig   string
 
 	rootCmd = &cobra.Command{
-		Use: "cs",
+		Use: "cs <env>",
 		Run: func(cmd *cobra.Command, args []string) {
 
 			s := switcher.NewSwitcher(kubeconfig, aoconfig)
