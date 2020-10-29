@@ -37,8 +37,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.PersistentFlags().StringVar(&kubeconfig, "kubeconfig", "", "kubeconfig file (default is $HOME/.kube/config)")
 	rootCmd.PersistentFlags().StringVar(&aoconfig, "aoconfig", "", "aoconfig file (default is $HOME/.ao.json)")
-	rootCmd.Flags().StringP("namespace", "n", "", "namespace")
-	rootCmd.Flags().StringP("cluster", "c", "", "cluster shortname")
+	rootCmd.Flags().StringP("namespace", "n", "aurora", "namespace")
 }
 
 func initConfig() {
