@@ -37,7 +37,7 @@ func (s *Switcher) Switch(clusterShortname string, namespace string) error {
 		return err
 	}
 
-	cluster, err := createClusterName(c.LoginURL)
+	cluster, err := createClusterName(c.URL)
 	if err != nil {
 		return err
 	}
