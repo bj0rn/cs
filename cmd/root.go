@@ -15,6 +15,11 @@ var (
 		Use: "cs <env>",
 		Run: func(cmd *cobra.Command, args []string) {
 
+			if len(args) == 0 {
+				cmd.Help()
+				os.Exit(0)
+			}
+
 			s := switcher.NewSwitcher(kubeconfig, aoconfig)
 
 			cluster := args[0]
