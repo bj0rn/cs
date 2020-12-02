@@ -1,9 +1,13 @@
 package switcher
 
 import (
+	"context"
 	"github.com/bj0rn/cs/pkg/ao"
 	"github.com/bj0rn/cs/pkg/kubeconfig"
 	"github.com/sirupsen/logrus"
+	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/tools/clientcmd"
+	"k8s.io/api/authentication/v1"
 	"net/url"
 	"strings"
 )
@@ -11,9 +15,16 @@ import (
 type Switcher struct {
 	KubeconfigPath string
 	AoConfigPath   string
+
 }
 
 func NewSwitcher(kubeconfigPath string, aoconfigPath string) *Switcher {
+
+
+
+
+
+
 	return &Switcher{
 		KubeconfigPath: kubeconfigPath,
 		AoConfigPath:   aoconfigPath,
